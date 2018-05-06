@@ -8,7 +8,7 @@ module.exports = {
   },
   output: {
     path: path.resolve(__dirname, 'dist'),
-    filename: "[name].js",
+    filename: '[name].js'
   },
   module: {
     rules: [
@@ -27,7 +27,7 @@ module.exports = {
       {
         test: /\.(less|css)$/,
         use: [
-          'vue-style-loader', // 看官网描述就是fork from style-loader ，过添加了对 ssr 的支持 
+          'vue-style-loader', // 看官网描述就是fork from style-loader ，过添加了对 ssr 的支持
           'css-loader',
           'less-loader'
         ]
@@ -35,15 +35,15 @@ module.exports = {
       {
         test: /\.(scss|css)$/,
         use: [
-          'vue-style-loader', // 看官网描述就是fork from style-loader ，过添加了对 ssr 的支持 
+          'vue-style-loader', // 看官网描述就是fork from style-loader ，过添加了对 ssr 的支持
           'css-loader',
           'sass-loader'
         ]
       }
     ]
   },
-  devtool: "source-map",
-  target: "web",
+  devtool: 'source-map',
+  target: 'web',
   plugins: [
     // make sure to include the plugin for the magic
     new VueLoaderPlugin()
@@ -52,8 +52,8 @@ module.exports = {
     // options for resolving module requests
     // (does not apply to resolving to loaders)
     // directories where to look for modules
-    extensions: [".js", ".vue", ".json", ".less"],
-    // alias: { 'vue': 'vue/dist/vue.js' }
+    extensions: ['.js', '.vue', '.json', '.less'],
+    alias: { 'vue': 'vue/dist/vue.js' }
     // alias: {
     //   'vue$': 'vue/dist/vue.esm.js',
     //   '@': resolve('src'),
